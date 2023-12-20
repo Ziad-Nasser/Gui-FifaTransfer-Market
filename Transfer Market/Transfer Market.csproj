@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9629CED-30CB-402F-B1CA-1DA431DC8E0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Transfer_Market</RootNamespace>
+    <AssemblyName>Transfer Market</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClubImageManager.cs" />
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayersMarket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayersMarket.Designer.cs">
+      <DependentUpon>PlayersMarket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinedPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JoinedPlayer.Designer.cs">
+      <DependentUpon>JoinedPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchasePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchasePlayer.Designer.cs">
+      <DependentUpon>PurchasePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayersMarket.resx">
+      <DependentUpon>PlayersMarket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinedPlayer.resx">
+      <DependentUpon>JoinedPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchasePlayer.resx">
+      <DependentUpon>PurchasePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManUnited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManCity.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nottingham-Forest-Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewcastleUnited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luton-Town.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Liverpool.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fulham.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Everton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crystal-Palace.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chelsea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Burnley.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brighton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brentford.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bournemouth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aston Villa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arsenal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wolverhampton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\West-Ham.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tottenham.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sheffield.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Harry Maguire.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Onana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heaton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Altay Bayındır.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reguilon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wan-Bissaka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dalot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shaw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lisandro Martínez.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Varane.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lindelof.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kobbie Mainoo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mejbri.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Van de Beek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scott Maguire.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amrabat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mason Mount.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eriksen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bruno Fernandes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Casemiro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Facundo Pellistri.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amad Diallo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alejandro Garnacho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hojlund.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antony Martial.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sancho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rashford.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antony.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
